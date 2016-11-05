@@ -9,6 +9,14 @@
   </head>
 
   <body>
+    <ul class="navbar navbar-default">
+      <div class="collapse navbar-collapse">
+        <a class="navbar-brand" href="#">Rails Birds</a>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Sign In</a></li>
+          <li><a href="<%= new_users_path %>">Sign Up</a></li>
+        </ul>
+    </ul>
     <%= yield %>
   </body>
 </html>

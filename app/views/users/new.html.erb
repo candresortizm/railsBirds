@@ -1,0 +1,29 @@
+<div class="container">
+  <%= form_for @user do |f| %>
+  <div class="form-group">
+    <label for="user_nickname">Nickname</label>
+    <input type="text" name="user[nickname]" class="form-control" id="user_nickname">
+  </div>
+    <div class="form-group">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <label for="user_password">Last name</label>
+      <input type="text" name="user[last_name]" value="<%= @user.last_name %>" id="user_last_name" class="form-control">
+    </div>
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.text_field :email, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <label for="user_password">Password</label>
+      <input type="password" name="user[password]" class="form-control" id="user_password">
+    </div>
+    <div class="form-group">
+      <label for="user_password">Password</label>
+      <input type="password" name="user[email_confirmation]" class="form-control" id="user_password_confirmation" >
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  <% end %>
+</div>
